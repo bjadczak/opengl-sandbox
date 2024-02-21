@@ -92,6 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -107,6 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,6 +124,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,6 +140,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -147,8 +151,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="glad.c" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source\glad.c" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Objects\Camera.cpp" />
+    <ClCompile Include="Source\Objects\EBO.cpp" />
+    <ClCompile Include="Source\Objects\Mesh.cpp" />
+    <ClCompile Include="Source\Objects\Model.cpp" />
+    <ClCompile Include="Source\Objects\shaderClass.cpp" />
+    <ClCompile Include="Source\Objects\Texture.cpp" />
+    <ClCompile Include="Source\Objects\VAO.cpp" />
+    <ClCompile Include="Source\Objects\VBO.cpp" />
+    <ClCompile Include="Source\stb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\default.frag" />
+    <None Include="Source\Shaders\default.vert" />
+    <None Include="Source\Shaders\light.frag" />
+    <None Include="Source\Shaders\light.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Objects\Camera.h" />
+    <ClInclude Include="Source\Objects\EBO.h" />
+    <ClInclude Include="Source\Objects\Mesh.h" />
+    <ClInclude Include="Source\Objects\Model.h" />
+    <ClInclude Include="Source\Objects\shaderClass.h" />
+    <ClInclude Include="Source\Objects\Texture.h" />
+    <ClInclude Include="Source\Objects\VAO.h" />
+    <ClInclude Include="Source\Objects\VBO.h" />
+    <ClInclude Include="Source\Objects\Vertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Source\Textures\brick.png" />
+    <Image Include="Source\Textures\pop_cat.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
